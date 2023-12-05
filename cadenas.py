@@ -17,6 +17,6 @@ print(cadena[::2])          #En este caso mostramos las posiciones 0,2,4,6,8 "Hl
 print(cadena[::-1])         #En este caso mostramos las posiciones 9,8,7,6,5,4,3,2,1,0  Comenzando desde el final ya que incremento es negativo
 print(cadena[::-2])         #En este caso mostramos las posiciones 9,7,5,3,1 "Hl ud"
 print(cadena[5::1])         #Si no ponemos "fin" recorre toda la cadena desde la posicion inio
-print(cadena[0::3])         #Muestra desde inicio hasta el fin una letra cada 3 (Posiciones 0,3,6 y 9)
+print(cadena[1::3])         #Muestra desde inicio hasta el fin una letra cada 3 (Posiciones 1,4,7)
 
 
