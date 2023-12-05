@@ -18,8 +18,13 @@ y = 5
 x,y = y,x
 print(x,y)
 
-
-
 #ERROR DE DEBEN ASIGNAR TANTOS VALORES COMO VARIABLES
 '''x,y,z = 1,2,3,4
 print(x,y,z)'''
+
+#EJEMPLO 'del'
+'''
+x = 'a'
+del x
+print(x)
+'''
