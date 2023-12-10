@@ -7,6 +7,7 @@ print(len(cadena))                      #Obtenemos la longitud de la cadena
 
 print(cadena.count('o'))                #Cuenta cuantas subcadenas hay en nuestra caedna
 print(cadena.count('O'))                #No hay ninguna  subcaedna 'O' en nuestro ejemplo
+print('Imprimiendo cadena.count desde la 0 a la 3 = ',cadena.count('o',0,3))
 
 print(cadena.find('ola'))               #Encuentra subcadena en cadena y devuelve la posición
 print(cadena.find('und'))
@@ -34,6 +35,12 @@ print(cadena_con_espacios.strip())      #A la derecha y a la izquierda
 print(cadena_con_espacios.split())      #Devuelve un array con las palabras que tenía el string
 cadena_con_separador = "cade-na-con-guión-como-separador"
 print(cadena_con_separador.split(sep='-'))  #Si le pasamos el parametro sep = 'valor', separa las palabras cuando encuentra el separador
+print(cadena_con_separador.split('-'))
+
+
+#Metodo Join
+lista = '|'.join(cadena_con_espacios)
+print(lista)
 
 #Concatenar cadenas
 nombre = "Adrian"
@@ -43,5 +50,5 @@ print (nombre + ' ' + apellido)
 print(nombre *3)
 
 #LOS STRINGS SON INMUTABLES POR LO TANTO EL SIGUIENTE EJEMPLO NO ES VALIDO Y GENERA ERROR
-nombre[1] = 'B'
-print(nombre)
+#nombre[1] = 'B'
+#print(nombre)
