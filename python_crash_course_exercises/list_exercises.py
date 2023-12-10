@@ -1,7 +1,7 @@
 #Ejercicios de práctica "Python crash course"
 #Chapter 3 Page 41 from 3.4 to 3.7
 
-#3.4 Práctica listas
+#3.4 Práctica listas pag 41-42
 #Invita a 3 amigos acenar utilizando listas
 
 amigos = [ 'juan', 'javier','federico']
@@ -41,3 +41,7 @@ del amigos[-1]  #Eliminamos al último elemento por el final
 print(amigos)
 del amigos[-1]  #Eliminamos el último elemento y comprobamos que la lista esta vacia
 print(amigos)
+
+#3.8 Pag 45
+
+lugares = ['pontevedra','vigo','la coruñá','lugo','orense']

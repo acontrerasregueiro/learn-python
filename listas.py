@@ -27,8 +27,21 @@ print(bicicleta_eliminada)
 bicicletas.remove('redline')    #Tambien podemos eliminar si conocemos el valor con el metodo remove(valor)
 print(bicicletas)               #CUIDADO, SOLO ELIMINA LA PRIMERA COINCIDENCIA, SI SE REPITE RECORRER EN BUCLE PARA ELIMINAR TODAS.
 
-
-
 #MODIFICAR ELEMENTOS DE UNA LISTA
 bicicletas[0] = 'bh'
 print(bicicletas)
+
+#ORDENAR LISTAS
+bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicicletas)
+bicicletas.sort()                       #Ordena alfabeticamente
+print(bicicletas)
+bicicletas.sort(reverse='True')         #Ordena alfabeticamente pero de la z a la a. 
+print(bicicletas)
+bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
+bicicletas.reverse()                    # Modifica la lista para mostrarla en el orden contrario
+print(bicicletas)
+
+#Si no queremos modificar la lista original debemos utilizar el metodo sorted(lista)
+bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
+print(sorted(bicicletas))

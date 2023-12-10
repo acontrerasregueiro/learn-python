@@ -19,6 +19,9 @@ print(cadena[::-2])         #En este caso mostramos las posiciones 9,7,5,3,1 "Hl
 print(cadena[5::1])         #Si no ponemos "fin" recorre toda la cadena desde la posicion inio
 print(cadena[1::3])         #Muestra desde inicio hasta el fin una letra cada 3 (Posiciones 1,4,7)  "o n"
 
+#TENER EN CUENTA QUE LAS LISTAS SON INMUTABLES, POR LO TANTO EL SIGUIENTE CODIGO GENERA ERROR
+#cadena[0] = 'P'
+#print(cadena)
 
 
 
