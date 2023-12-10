@@ -45,3 +45,22 @@ print(amigos)
 #3.8 Pag 45
 
 lugares = ['pontevedra','vigo','la coruñá','lugo','orense']
+print(lugares)
+print(sorted(lugares))          #Imprime la lista alfabeticamente utilizando sorted()
+print(lugares)                  #Comprobamos que la lista inicial no ha sido modificada
+print(sorted(sorted(lugares)))  #Imprime la lista alfabeticamente de la z a la a, sin modificar la lista inicial
+print(lugares)
+lugares.reverse()               #Ordena la lista en el sentido contrario
+print(lugares)
+lugares.reverse()               #Devuelve la lista a su orden original
+print(lugares)
+lugares.sort()                  #Ordena la lista alfabéticamente
+print(lugares)             
+lugares.sort(reverse=True)      #Ordena la lista alfabéticamente en el orden contrario de la z a la a
+print(lugares)         
+
+#3.9 Muestra la longitud de una lista
+print(len(lugares))
+
+#3.10 Utiliza todos los métodos y funciones vistos en el capitulo
+#Realizado todo en ejercicios anteriores.

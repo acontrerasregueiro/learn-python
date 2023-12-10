@@ -13,6 +13,12 @@ print(nueva_lista)
 lista.extend(nueva_lista) #A una lista se le puede extender otra lista, pero la agrega elemento a elemento.
 #A la vieja lista se le añade elemento a elemento la nueva_lista con extend
 print(lista)
+lista.extend(range(0,3)) # Con extend se pueden anadir elementos que sean iterables
+print(lista)
+'''Por lo que el siguiente codigo genera error 
+lista.extend(4)  YA QUE UN INT NO ES ITERABLE
+print(lista)
+'''
 
 #metodo index()
 indice_encontrado = lista.index('abc')
@@ -23,5 +29,7 @@ print(indice_encontrado)
 indice_encontrado = lista.index('abc',3,6)
 print(indice_encontrado)
 
+lista2 = lista.copy()
+print(lista2)
 lista.clear()   #Elimina todos los elementos de una lista
 print(lista)
