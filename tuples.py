@@ -21,8 +21,8 @@ print(ciudades_clima[0][0][1])      #Segundo carácter del string 'Buenos Aires'
 print(ciudades_clima[0][2][0])      #Primer carácter del string de la primera tupla contenida en ciudades_clima en la posición dos 'Soleado'
 
 for clima in ciudades_clima:
-    print(f'Ciudad : {clima[0]}')
-    print(f'Temperatura : {clima[1]}')
-    print(f'Clima : {clima[2]} \n')
+    print(f'Ciudad : {clima[0]}')       #La primera posición de la tupla anidada corresponde a la ciudad
+    print(f'Temperatura : {clima[1]}')  #La segunda a la temperatura
+    print(f'Clima : {clima[2]} \n')     #La tercera es el tipo de clima
 
     
