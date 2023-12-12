@@ -1,0 +1,25 @@
+'''Estáis jugando una partida de dardos y necesitas hacer un pequeño programa, no solo para contar los puntos; sino, además, 
+para evaluar si alguien ha ganado o no.
+
+Sois los mismos 4 jugadores del dominó del ejercicio 4 de autoevaluación, 
+por lo que puedes basarte 'más o menos' en la estructura de ese ejercicio... pero aquí las reglas cambian:
+
+A nivel funcional:
+
+Todos partís con una puntuación inicial de 121 puntos.
+En cada ronda, tiráis 3 dardos y conseguís una puntuación que será la suma de esas 3 tiradas.
+Esa puntuación total de la ronda, se restará a los puntos iniciales de cada uno. A partir de ahí,
+ la puntuación de cada ronda será restada a la puntuación de cada jugador.
+Gana quien llegue a 0 o que incluso se meta en números negativos.
+Para que no se eternice el juego, váis a jugar solo 3 rondas.
+Una vez que alguien llegue a 0 puntos a puntos negativos, se acaba la partida.
+Puede haber más de un ganador si varios jugadores cumplen las condiciones para ganar.
+El programa ha de decir en qué ronda ha habido un ganador o si, por el contrario, tras la finalización de las tres rondas,
+nadie ha conseguido llegar a 0 puntos o menos.
+
+A nivel técnico:
+
+Utiliza un tipo de datos que pueda almacenar al menos dos valores para cada jugador.
+Pide por pantalla nombres y puntuación.
+Utiliza el bucle if/else como ya se ha visto en algún ejemplo. Conforme avances podrás ir refinando el código con otros bucles y funciones.
+No escribas código en la caja de texto, adjuna un archivo con tu respuesta.'''
