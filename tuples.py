@@ -25,4 +25,23 @@ for clima in ciudades_clima:
     print(f'Temperatura : {clima[1]}')  #La segunda a la temperatura
     print(f'Clima : {clima[2]} \n')     #La tercera es el tipo de clima
 
-    
+
+#Asignacion múltiple a variables con tuplas
+a,b,c = ('adri','javi','miriam')
+print(a)
+print(b)
+print(c)
+
+#Métodos Count() e Index()
+tupla =(1,2,3,4,1,5,6,7,1,9)
+print(tupla.count(1))
+print(tupla.count(4))
+
+#Método index(valor,[inicio,fin]), indica EL INDICE DE LA PRIMERA COINCIDENCIA
+
+print(tupla.index(4))   #En nuestra tupla 4 está en la posición tupla[3]
+print(tupla.index(1))   #Muestra el indice del primer 1 encontrado en la tupla tupl[0]
+print(tupla.index(1,3)) #Buscar buscamos a partir de la 3º posición, el indice del siguiente en la tupla es 4
+print(tupla.index(1,5,9)) #Podemos poner rango de posiciones donde buscar
+
+print(tupla.index(19))  #SI NO LO ENCUENTRA NOS DEVUELVE VALUEERROR: X NOT IN TUPLE
