@@ -15,14 +15,14 @@ print(x,y,z)
 #EJEMPLO DE ASIGNACION MULTIPLE
 x = 4
 y = 5
-x,y = y,x
-print(x,y)
+x, y = y, x
+print(x, y)
 
-#ERROR DE DEBEN ASIGNAR TANTOS VALORES COMO VARIABLES
+# ERROR DE DEBEN ASIGNAR TANTOS VALORES COMO VARIABLES
 '''x,y,z = 1,2,3,4
 print(x,y,z)'''
 
-#EJEMPLO 'del'
+# EJEMPLO 'del'
 '''
 x = 'a'
 del x

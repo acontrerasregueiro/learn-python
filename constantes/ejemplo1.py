@@ -8,4 +8,3 @@ print("El usuario es {0} y la contraseña es {1}".format(constantes.USUARIO,cons
 
 
 
-

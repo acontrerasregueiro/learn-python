@@ -19,33 +19,36 @@ print(sum(numeros))
 for valor in range(1,21,2):
     print(valor)
 
-#4.7 Multiplos de 3 desde el 3 al 30
+# 4.7 Multiplos de 3 desde el 3 al 30
 print('Multiplos de 3 : ')
 for multiplo in range(3,30):
     if multiplo % 3 == 0:
         print(multiplo)
 
-#4.8 Cubos
+# 4.8 Cubos
 for valor in range(1,11):
     cubo = valor ** 3
     print(f' El cubo de {valor} es {cubo}')
 
-#4.9 Cubo mediante list comprehension
-cubo = [valor ** 3 for valor in range(1,11)]
+# 4.9 Cubo mediante list comprehension
+cubo = [valor ** 3 for valor in range(1, 11)]
 print(cubo)
 
-#4.10 Slicing listas
+# 4.10 Slicing listas
 bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
 nombres = ['adri', 'javi','raul', 'gonzalo']
 bicicletas.extend(nombres)      #Ampliamos la lista
 print(bicicletas)
 print('Las primeras posiciones son : {}'.format(bicicletas[0:3]))
 print('Las tres del medio son : {}'.format(bicicletas[3:6]))
-#OJO ATENCION A LA SINTAXIS DE INDICES NEGATIVOS
+# OJO ATENCION A LA SINTAXIS DE INDICES NEGATIVOS
 print('Las tres ultimas posiciones son : {} '.format(bicicletas[-1:-4:-1]))
 
-Lst = [50, 70, 30, 20, 90, 10, 50]
- 
-# Display list
-print(Lst[-7::1])
-
+# 4.11
+pizzas = ['Peperonni','Barbacoa','Carbonara','Calabresa']
+pizzas.append('Hawaiana')
+pizzas.insert(2,'Paisana')
+friend_pizzas = pizzas[:]
+friend_pizzas.append('Mediterranea')
+print(pizzas)
+print(friend_pizzas)

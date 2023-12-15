@@ -47,10 +47,11 @@ if  (terminado == False):
     #Comprobamos puntuaciones
     if puntuacion[Nombre_Jugador_1] <= 0 or puntuacion[Nombre_Jugador_2] <= 0 or puntuacion[Nombre_Jugador_3] <= 0 or puntuacion[Nombre_Jugador_4] <= 0:
         print('El juego ha finalizado en la ronda nº ' + str(ronda))
+        terminado = True
     else:
         print('Continuamos a la ronda 3')
 
-if  terminado == False:  
+if  (terminado == False):  
     ronda = 3
     Puntos_Jugador_1 = int(input('Introduce la puntuación total de {0} en la ronda {1} :'.format(Nombre_Jugador_1, ronda)))
     Puntos_Jugador_2 = int(input('Introduce la puntuación total de {0} en la ronda {1} :'.format(Nombre_Jugador_2, ronda)))
