@@ -36,7 +36,7 @@ bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicicletas)
 bicicletas.sort()                       #Ordena alfabeticamente
 print(bicicletas)
-bicicletas.sort(reverse='True')         #Ordena alfabeticamente pero de la z a la a. 
+bicicletas.sort(reverse=True)         #Ordena alfabeticamente pero de la z a la a. 
 print(bicicletas)
 bicicletas = ['trek', 'cannondale', 'redline', 'specialized']
 bicicletas.reverse()                    # Modifica la lista para mostrarla en el orden contrario

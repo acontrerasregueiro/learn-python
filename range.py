@@ -18,3 +18,8 @@ for valor in range(1,11):
     cuadrados.append(valor ** 2)
 print(cuadrados)
 del cuadrados
+
+
+#Ejemplos LIST COMPREHENSIONS
+cuadrados = [valor ** 2 for valor in range(1,11)]
+print(cuadrados)
