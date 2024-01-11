@@ -5,15 +5,15 @@ def buscar_reinas():
     global tablero
     global filas_no_validas
     global columnas_no_validas
-
-    numero_reinas = 0
     for fila in range(0,8):
         for columna in range(0,8):
             if tablero[fila][columna] == 1:
                 print('encontrada reina en posición : ', fila, columna)
-                filas_no_validas.append(fila)
-                columnas_no_validas.append(columna)
-                numero_reinas += 1
+                if not fila in filas_no_validas:                    
+                    filas_no_validas.append(fila)                    
+                if not columna in columnas_no_validas:
+                    columnas_no_validas.append(columna)
+                
     print('FILAS NO VALIDAS :', filas_no_validas)
     print('COLS NO VALIDAS :', columnas_no_validas)
 #Creamos tablero
@@ -40,8 +40,8 @@ def colocar_reina():
     else:
                 
         if reinas_colocadas < 8:
-            fila = random.randint(0,7)      
-            columna = random.randint(0,7)    
+            
+                
             reinas_colocadas +=1
             tablero[fila][columna] = 1                
             print('Colocada REINA en ', fila, columna)

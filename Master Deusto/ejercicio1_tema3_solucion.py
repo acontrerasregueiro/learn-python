@@ -1,7 +1,4 @@
 
-#Inicializamos variable, el juego comienza con la ronda 1
-from re import A
-
 
 Nombre_Jugador_1 = input('Introduce el nombre del primer jugador: ')
 Nombre_Jugador_2 = input('Introduce el nombre del segundo jugador: ')
@@ -22,36 +19,36 @@ terminado = False
 ronda = 1
 #Jugador 1 tira los 3 dardos
 puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
 puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
 puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
-print(puntuacion[Nombre_Jugador_1])
+    'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
+print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_1,puntuacion[Nombre_Jugador_1]))
 #Jugador 2
 puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
 puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
 puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
-print(puntuacion[Nombre_Jugador_2])
+    'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
+print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_2,puntuacion[Nombre_Jugador_2]))
 #Jugador 3
 puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
 puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
 puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
-print(puntuacion[Nombre_Jugador_3])
+    'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
+print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_3,puntuacion[Nombre_Jugador_3]))
 #Jugador 4
 puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
 puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
+    'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
 puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-    'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
-print(puntuacion[Nombre_Jugador_4])
+    'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
+print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_4,puntuacion[Nombre_Jugador_4]))
 
 #Chequeamos si ha finalizado el juego
 if puntuacion[Nombre_Jugador_1] <= 0 or puntuacion[Nombre_Jugador_2] <= 0 or puntuacion[Nombre_Jugador_3] <= 0 or puntuacion[Nombre_Jugador_4] <= 0:
@@ -63,36 +60,38 @@ elif  (terminado == False):
     ronda = 2
     #Jugador 1 tira los 3 dardos
     puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
     puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
     puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
-    print(puntuacion[Nombre_Jugador_1])
+        'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
+    print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_1,puntuacion[Nombre_Jugador_1]))
     #Jugador 2
     puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
     puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
     puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
-    print(puntuacion[Nombre_Jugador_2])
+        'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
+    print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_2,puntuacion[Nombre_Jugador_2]))
     #Jugador 3
     puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
     puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
     puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
-    print(puntuacion[Nombre_Jugador_3])
+        'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
+    print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_3,puntuacion[Nombre_Jugador_3]))
+
     #Jugador 4
     puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
     puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
+        'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
     puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-        'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
-    print(puntuacion[Nombre_Jugador_4])
+        'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
+    print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_4,puntuacion[Nombre_Jugador_4]))
+
     
     #Comprobamos puntuaciones
     if puntuacion[Nombre_Jugador_1] <= 0 or puntuacion[Nombre_Jugador_2] <= 0 or puntuacion[Nombre_Jugador_3] <= 0 or puntuacion[Nombre_Jugador_4] <= 0:
@@ -104,36 +103,40 @@ elif  (terminado == False):
             ronda = 3
         #Jugador 1 tira los 3 dardos
         puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_1, ronda)))
         puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_1, ronda)))
         puntuacion[Nombre_Jugador_1] = puntuacion[Nombre_Jugador_1] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
-        print(puntuacion[Nombre_Jugador_1])
+            'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_1, ronda)))
+        print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_1,puntuacion[Nombre_Jugador_1]))
+
         #Jugador 2
         puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_2, ronda)))
         puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_2, ronda)))
         puntuacion[Nombre_Jugador_2] = puntuacion[Nombre_Jugador_2] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
-        print(puntuacion[Nombre_Jugador_2])
+            'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_2, ronda)))
+        print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_2,puntuacion[Nombre_Jugador_2]))
+
         #Jugador 3
         puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_3, ronda)))
         puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_3, ronda)))
         puntuacion[Nombre_Jugador_3] = puntuacion[Nombre_Jugador_3] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
-        print(puntuacion[Nombre_Jugador_3])
+            'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_3, ronda)))
+        print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_3,puntuacion[Nombre_Jugador_3]))
+
         #Jugador 4
         puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 1 :'.format(Nombre_Jugador_4, ronda)))
         puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
+            'Introduce la puntuación de {0} en la ronda {1} dardo 2 :'.format(Nombre_Jugador_4, ronda)))
         puntuacion[Nombre_Jugador_4] = puntuacion[Nombre_Jugador_4] - int(input(
-            'Introduce la puntuación total de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
-        print(puntuacion[Nombre_Jugador_4])
+            'Introduce la puntuación de {0} en la ronda {1} dardo 3 :'.format(Nombre_Jugador_4, ronda)))
+        print('Puntuacion en ronda {0} de {1} : {2}'.format(str(ronda),Nombre_Jugador_4,puntuacion[Nombre_Jugador_4]))
+
             
         #Comprobamos puntuaciones
         if puntuacion[Nombre_Jugador_1] <= 0 or puntuacion[Nombre_Jugador_2] <= 0 or puntuacion[Nombre_Jugador_3] <= 0 or puntuacion[Nombre_Jugador_4] <= 0:
