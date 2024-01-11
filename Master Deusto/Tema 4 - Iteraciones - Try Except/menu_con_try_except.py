@@ -31,5 +31,6 @@ while(True):
     opcion = input()
     try:
       continuar = switch(opcion)
+      #Si nos eval nos devuelve que no es codigo Python ejecutará el except
     except Exception as a:
       print("Seleccione una opción válida")#Gestionar más concretament
