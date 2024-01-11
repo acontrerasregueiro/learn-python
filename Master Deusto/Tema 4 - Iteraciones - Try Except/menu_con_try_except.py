@@ -28,9 +28,9 @@ while(True):
     2) Borrar
     3) Visualizar
     4) Salir""")
-    opcion = input()
+    opcion = input("Elige una opcion : ")
     try:
       continuar = switch(opcion)
       #Si nos eval nos devuelve que no es codigo Python ejecutará el except
     except Exception as a:
-      print("Seleccione una opción válida")#Gestionar más concretament
+      print("Seleccione una opción válida")
