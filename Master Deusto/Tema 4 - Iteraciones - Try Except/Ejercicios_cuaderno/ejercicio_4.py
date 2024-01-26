@@ -17,7 +17,16 @@ def buscar_contacto(nombre,telefono):
     """Función que busca un contacto en la agenda"""
     
 def borrar_contacto():
-    print("Introduzca el nombre del contacto a borrar")
+    """Función para eliminar un contacto de la agenda"""
+    nombre= input("Introduzca el nombre del contacto a borrar: ")
+    if nombre.isalpha():
+        if agenda[nombre]:
+            agenda.pop(nombre)
+        else:
+            print("No se encuentra en la agenda")
+    else:
+        print("Valor no válido")
+    main()
 
 def anadir_contacto():
     """Funcion para añadir contactos a la agenda"""
