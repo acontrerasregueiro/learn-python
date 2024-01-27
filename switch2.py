@@ -19,7 +19,7 @@ while(True):
     3) Salir""")
     opcion = input()
     #try:
-    continuar = menu(opcion)
+    menu(opcion)
     #except Exception as a:
     #  print("Seleccione una opción válida")#Gestionar más concretamente
 

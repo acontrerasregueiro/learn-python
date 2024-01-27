@@ -20,13 +20,13 @@ def borrar_contacto():
     """Función para eliminar un contacto de la agenda"""
     nombre= input("Introduzca el nombre del contacto a borrar: ")
     if nombre.isalpha():
-        if agenda[nombre]:
+        if nombre in agenda:
             agenda.pop(nombre)
         else:
-            print("No se encuentra en la agenda")
+            print("\nNo se encuentra en la agenda")
     else:
         print("Valor no válido")
-    main()
+    #main()
 
 def anadir_contacto():
     """Funcion para añadir contactos a la agenda"""
@@ -41,7 +41,6 @@ def anadir_contacto():
             print("\n--- Error introduzca datos válidos ---\n")
     else:
         print("\n--- Contacto duplicado ---\n")
-    main()
 
 def ver_agenda():
     """Función para visualizar la agenda"""
@@ -50,25 +49,25 @@ def ver_agenda():
     for clave,valor in agenda.items():
         print(f'Nombre {clave} : Teléfono: {valor}')
     print(f'Total de contactos: {len(agenda)}\n')
-    main()
 
 def main():
     """Funcion principal"""
-    print("""\nSelecciona una opción:
-        1) Añadir contacto
-        2) Borrar contacto
-        3) Ver la agenda
-        4) Salir
-        """)
-    opcion = input('Elija una opción del menú: ')
-    match opcion:
-        case "1": anadir_contacto()
-        case "2": borrar_contacto()
-        case "3": ver_agenda()
-        case "4": quit()
-        case _:
-            print("Opción no válida")
-            main()
+    while True:
+        print("""\nSelecciona una opción:
+            1) Añadir contacto
+            2) Borrar contacto
+            3) Ver la agenda
+            4) Salir
+            """)
+        opcion = input('Elija una opción del menú: ')
+        match opcion:
+            case "1": anadir_contacto()
+            case "2": borrar_contacto()
+            case "3": ver_agenda()
+            case "4": quit()
+            case _:
+                print("Opción no válida")
+
 
 if __name__ == "__main__":
     main()
