@@ -105,11 +105,12 @@ print(jugadores)
 jugadores.pop('1')
 print(jugadores)
 
-dic = dict(
+dictest = dict(
 Nombre="Josep",
 Tel=688777555,
 Material=["PC", "Teclado", "WebCam"]
 )
+print(dictest)
 print("fromkeys")
 #fromkeys() - Esta función nos ayuda a generar un diccionario a partir de las clave
 variables = ('Nombre', 'Tel', 'Material')

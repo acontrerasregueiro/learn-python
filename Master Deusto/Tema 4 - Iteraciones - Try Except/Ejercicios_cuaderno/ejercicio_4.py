@@ -12,10 +12,6 @@ En el apartado de visualizar, debe mostrarse al final la cantidad de contactos.
 '''
 
 agenda = {}
-
-def buscar_contacto(nombre,telefono):
-    """Función que busca un contacto en la agenda"""
-    
 def borrar_contacto():
     """Función para eliminar un contacto de la agenda"""
     nombre= input("Introduzca el nombre del contacto a borrar: ")
