@@ -1,4 +1,4 @@
-
+import random
 colores = ['amarillo', 'azul', 'verde', 'rojo']
 usuarios =[{'Nombre':'Josep'}, {'Nombre':'Claudio'},
            {'Nombre':'Isabel'}, {'Nombre':'Sheila'}]
@@ -16,12 +16,6 @@ def buscar_en_array(valor,array):
     else:
         return False
 
-def anadir_usuario():
-    pass
-
-def asignar_colores():
-    pass
-
 def anadir_colores():
     """Función para añadir colores"""
     while True:
@@ -38,9 +32,12 @@ def anadir_colores():
     print("Listado de colores actual: ", colores)
 
 def usuarios_ordenados():
-    """ Muestra por pantalla los usuarios ordenado por la clave 'Nombre'"""
-    ordenados = sorted(usuarios,key=lambda x:x['Nombre'])
-    print(ordenados)
+    """Muestra por pantalla los usuarios alfabeticamente por la clave Nombre """
+    listado_nombres = []
+    for user in usuarios:
+        listado_nombres.append(user['Nombre'])
+    print(sorted(listado_nombres))
+
 
 def anadir_usuarios():
     """Función para añadir usuarios a la agenda"""
@@ -50,16 +47,47 @@ def anadir_usuarios():
     while True:
         usuario = input("Introduzca un nombre de usuario: ")
         if usuario.isalpha():
-            if usuario in listado_nombres:
+            if usuario.title() in listado_nombres:
                 print("El usuario ya existe")
             else:
-                usuario_a_anadir = {'Nombre': usuario}                    
+                usuario_a_anadir = {'Nombre': usuario.title()}                    
                 usuarios.append(usuario_a_anadir)
                 print(usuarios)
                 break
         else:
             print("Introduzca un usuario válido")
             continue
+    #Necesitamos un color por usuario, comprobamos y anadimos si necesario    
+    if (len(usuarios)) > len(colores):
+        anadir_colores()
+
+def asignar_colores():
+    """Funcion para asignar un color a cada usuario"""
+    global usuarios
+    colores_sin_asignar = colores.copy()
+    print(colores_sin_asignar)
+    for i in range(len(usuarios)):
+        indice = random.randint(0,len(colores_sin_asignar)-1)
+        color_a_anadir = colores_sin_asignar[indice]
+        usuarios[i]['Color'] = color_a_anadir
+        print("Asignado el color {} al usuario {}".format(colores_sin_asignar[indice],usuarios[i]['Nombre']))
+        del colores_sin_asignar[indice]
+
+def eliminar_usuario():
+    """Funcion para eliminar un usuario de la lista dado el índice"""
+    while(True):   
+        try:
+            x = int(input("Introduce el valor de x : "))
+            print("Introduce un valor entre 0 y ", len(usuarios))
+            if (x <= len(usuarios) -1):
+                del usuarios[x]
+                break
+            else:
+                print("Índice no válido")
+                continue
+        except ValueError:
+                print("Valor incorrecto")
+        
 def main():
     """Función principal"""
     while True:
@@ -68,10 +96,12 @@ def main():
         2.- Mostrar listado de colores
         3.- Ordenar colores alfabéticamente
         4.- Añadir usuario
-        5.- Mostrar un listado de usuarios alfabéticamente 
-        6.- Eliminar usuario
-        7.- Asignar colores
-        8.- Salir\n''')
+        5.- Mostrar un listado de nombres usuarios alfabéticamente
+        6.- Mostrar un listado de de todos los usuarios 
+        7.- Eliminar usuario
+        8.- Asignar colores aleatoriamente
+        9.- Eliminar usuario dado el índice
+        0.- Salir\n''')
 
         opcion = input("Elija la opción correspondiente: ")
 
@@ -88,8 +118,15 @@ def main():
             case('5'):
                 usuarios_ordenados()
             case('6'):
+                print(usuarios)
+            case('7'):
                 print(colores)
             case('8'):
+                asignar_colores()
+            case('9'):
+                eliminar_usuario()           
+            case('0'):
+                print("Cerrando aplicación, hasta otra...")
                 quit()
             case(_):
                 print("\nERROR, introduzca una opción válida\n")
