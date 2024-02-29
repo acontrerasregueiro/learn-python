@@ -4,12 +4,12 @@ Una lista de colores colores = ['amarillo', 'azul', 'verde', 'rojo']
 Una lista de diccionarios de usuarios usuarios = [{'Nombre':'Josep'}, {'Nombre':'Claudio'}, {'Nombre':'Isabel'}, {'Nombre':'Sheila'}]
 Vamos a desarrollar un menú, que nos permita estas acciones:
 
-Añadir colores a la lista.
-Comprobar que no existe y añadir a la lista.
-Recuerda tener en cuenta la mayúscula y minúscula (solo insertar en la lista en minúscula).
-No salir de "añadir colores", sin añadir un color.
-Mostrar listado de colores.
-Ordenar listado de colores alfabéticamente.
+-Añadir colores a la lista.
+-Comprobar que no existe y añadir a la lista.
+-Recuerda tener en cuenta la mayúscula y minúscula (solo insertar en la lista en minúscula).
+-No salir de "añadir colores", sin añadir un color.
+-Mostrar listado de colores.
+-Ordenar listado de colores alfabéticamente.
 Añadir usuarios
 Cada vez que se añade un usuario, hay que agregar un color a la lista si no hay suficientes para repartir entre los
  usuarios.

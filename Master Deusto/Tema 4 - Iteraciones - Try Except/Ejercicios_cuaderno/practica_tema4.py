@@ -37,17 +37,41 @@ def anadir_colores():
             continue
     print("Listado de colores actual: ", colores)
 
+def usuarios_ordenados():
+    """ Muestra por pantalla los usuarios ordenado por la clave 'Nombre'"""
+    ordenados = sorted(usuarios,key=lambda x:x['Nombre'])
+    print(ordenados)
+
+def anadir_usuarios():
+    """Función para añadir usuarios a la agenda"""
+    listado_nombres = []
+    for user in usuarios:
+        listado_nombres.append(user['Nombre'])
+    while True:
+        usuario = input("Introduzca un nombre de usuario: ")
+        if usuario.isalpha():
+            if usuario in listado_nombres:
+                print("El usuario ya existe")
+            else:
+                usuario_a_anadir = {'Nombre': usuario}                    
+                usuarios.append(usuario_a_anadir)
+                print(usuarios)
+                break
+        else:
+            print("Introduzca un usuario válido")
+            continue
 def main():
     """Función principal"""
     while True:
         print('''Bienvenido, que desea realizar:\n
         1.- Añadir colores
         2.- Mostrar listado de colores
-        3.- Añadir usuario
-        4.- Mostrar un listado de usuarios 
-        5.- Eliminar usuario
-        6.- Asignar colores
-        7.- Salir\n''')
+        3.- Ordenar colores alfabéticamente
+        4.- Añadir usuario
+        5.- Mostrar un listado de usuarios alfabéticamente 
+        6.- Eliminar usuario
+        7.- Asignar colores
+        8.- Salir\n''')
 
         opcion = input("Elija la opción correspondiente: ")
 
@@ -55,16 +79,17 @@ def main():
             case('1'):
                 anadir_colores()
             case('2'):
-                print(sorted(colores))
+                print(colores)
             case('3'):
+                colores.sort()
                 print(colores)
             case('4'):
-                print(colores)
+                anadir_usuarios()
             case('5'):
-                print(colores)
+                usuarios_ordenados()
             case('6'):
                 print(colores)
-            case('7'):
+            case('8'):
                 quit()
             case(_):
                 print("\nERROR, introduzca una opción válida\n")
