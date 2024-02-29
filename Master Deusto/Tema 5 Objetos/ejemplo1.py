@@ -13,7 +13,7 @@ class Perro:
         self.raza = raza
         
     def ladra(self):
-        print("Guau")
+        print("Guau") 
     
     def camina(self,pasos):
         print(f"Caminando {pasos} pasos")
@@ -22,5 +22,10 @@ miperro = Perro('Oli','Mastin')
 miperro.camina(4)
 miperro.ladra()
 
+miperro2 = Perro('Texas','Pastor alemán')
+miperro2.camina(5)
+miperro2.ladra()
 print(miperro.nombre)
+
+print(f'Mi perro2 se llama : {miperro2.nombre}')
         
