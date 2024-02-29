@@ -3,10 +3,6 @@ colores = ['amarillo', 'azul', 'verde', 'rojo']
 usuarios =[{'Nombre':'Josep'}, {'Nombre':'Claudio'},
            {'Nombre':'Isabel'}, {'Nombre':'Sheila'}]
 
-def test():
-    usuarios[0]['telefono'] = 1
-    print(usuarios)
-
 def buscar_en_array(valor,array):
     '''Esta funcion le pasamos un valor y un array 
     y nos devuelve True si valor se encuentra en array
@@ -97,11 +93,10 @@ def main():
         3.- Ordenar colores alfabéticamente
         4.- Añadir usuario
         5.- Mostrar un listado de nombres usuarios alfabéticamente
-        6.- Mostrar un listado de de todos los usuarios 
-        7.- Eliminar usuario
-        8.- Asignar colores aleatoriamente
-        9.- Eliminar usuario dado el índice
-        0.- Salir\n''')
+        6.- Mostrar un listado de de todos los usuarios         
+        7.- Asignar colores aleatoriamente
+        8.- Eliminar usuario dado el índice
+        9.- Salir\n''')
 
         opcion = input("Elija la opción correspondiente: ")
 
@@ -120,12 +115,10 @@ def main():
             case('6'):
                 print(usuarios)
             case('7'):
-                print(colores)
-            case('8'):
                 asignar_colores()
+            case('8'):
+                eliminar_usuario()
             case('9'):
-                eliminar_usuario()           
-            case('0'):
                 print("Cerrando aplicación, hasta otra...")
                 quit()
             case(_):
