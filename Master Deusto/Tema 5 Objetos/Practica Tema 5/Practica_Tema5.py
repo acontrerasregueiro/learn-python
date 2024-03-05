@@ -1,0 +1,1 @@
+import clase_persona as clase

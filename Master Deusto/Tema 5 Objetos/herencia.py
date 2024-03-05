@@ -26,7 +26,7 @@ class VehiculoHibrido(Vehiculo,VehiculoElectrico):
         VehiculoElectrico.__init__(self,marca,modelo,capacidad_bateria)
         self.capacidad_tanque = capacidad_tanque
     
-    def recorrer_Distancia(self,distancia):
+    def recorrer_distancia(self,distancia):
         consumo_bateria = distancia / 10
         if (consumo_bateria <= self.capacidad_bateria):
             self.capacidad_bateria = consumo_bateria
@@ -36,9 +36,11 @@ class VehiculoHibrido(Vehiculo,VehiculoElectrico):
 
 #Creamos objeto
 
-Vehiculo_hibrido = VehiculoHibrido("Toyota", "Prius", 50 , 40)
+Vehiculo_hibrido = VehiculoHibrido("Toyota", "Prius", 7 , 40)
 
 print(Vehiculo_hibrido.marca)
 print(Vehiculo_hibrido.modelo)
 Vehiculo_hibrido.acelerar()
 Vehiculo_hibrido.frenar()
+Vehiculo_hibrido.cargar_bateria()
+Vehiculo_hibrido.recorrer_distancia(80)
