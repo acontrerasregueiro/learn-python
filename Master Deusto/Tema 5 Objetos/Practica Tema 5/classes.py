@@ -7,16 +7,13 @@ class Cancion():
 
 class Persona():
     
-    def __init__(self,dni,nombre,apellido,apellido_2,poblacion,pais,cancion):
+    def __init__(self,dni,nombre,apellido,apellido_2,poblacion,pais):
         self.dni = dni
         self.nombre = nombre
         self.apellido = apellido
         self.apellido_2 = apellido_2
         self.poblacion = poblacion
         self.pais = pais
-        self.cancion = cancion
-        
-
 
 class Favoritas(Persona,Cancion):
     
@@ -31,15 +28,14 @@ class Favoritas(Persona,Cancion):
         
     def mostrar_favorita(self):
         print("La cancion favorita de {} es {}." .format(self.dni,self.titulo))            
-
+""""""
 
 cancion = Cancion("Hola", "ACDC" , "Rock")
 persona = Persona("34898103L","Javier","Lopez" , "Lopez", "Madrid" ,
-                       "España", cancion)
-
+                       "España")
 
 favorita = Favoritas(persona,cancion)
 print(favorita.dni)
 print(favorita.titulo)
 favorita.mostrar_favorita()
-#favorita.mostrar_favorita()
+#favorita.mostrar_favorita()"""
