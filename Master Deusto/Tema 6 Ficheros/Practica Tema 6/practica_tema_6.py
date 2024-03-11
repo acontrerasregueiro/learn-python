@@ -1,4 +1,5 @@
 import cargar_liga as liga
+from settings import (espana,alemania,italia,austria,inglaterra)
 
 def main():
     """ Menu Operaciones"""
@@ -19,7 +20,7 @@ def main():
                 liga.cargar_liga(espana)
             case('2'):
                 liga.cargar_liga(alemania)
-            case('3'):            
+            case('3'):
                 liga.cargar_liga(austria)
             case('4'):
                 liga.cargar_liga(inglaterra)
