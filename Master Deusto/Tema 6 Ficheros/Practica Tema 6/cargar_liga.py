@@ -9,8 +9,8 @@ import pandas as pd
 def mostrar_datos(url):
    #leer un fichero en remoto con pandas
     info = pd.read_json(url)
-    #global info
-    print(str(info['name']))
+    print(info['name'][0])
+    
     for equipo in info['clubs']:
         print(equipo['name']) 
     
