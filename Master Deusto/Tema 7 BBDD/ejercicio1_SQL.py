@@ -42,17 +42,21 @@ cursor.execute('''SELECT * FROM peliculas
                ORDER BY oscars DESC''')
 peliculas = cursor.fetchall()
 print('PELÍCULA MÁS GALARDONADA DE LOS 90',peliculas[0])
+
 #Película más galardonada anterior a los 90
 cursor.execute('''SELECT * FROM peliculas 
                WHERE año < 1990 
                ORDER BY oscars DESC''')
 peliculas = cursor.fetchall()
 print('PELÍCULA MÁS GALARDONADA ANTERIOR A LOS 90',peliculas[0])
+
 #Película con menos nominaciones
+
 cursor.execute('''SELECT * FROM peliculas 
                ORDER BY nominaciones ASC''')
 peliculas = cursor.fetchall()
 print('PELÍCULA CON MENOS NOMINACIONES',peliculas[0])
+
 #TOP 10 porcentaje de galardones sobre nominaciones
 cursor.execute('''SELECT * FROM peliculas''')
 peliculas = cursor.fetchall()
@@ -61,5 +65,7 @@ for registro in peliculas:
     porcentaje = round(porcentaje,0)
     if porcentaje >= 90:
         print('PELÍCULA EN EL TOP 10 DE OSCAR SOBRE NOMINACIONES',registro[0])
+        
 #Cerramos la conexión
+
 conn.close()
