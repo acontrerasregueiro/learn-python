@@ -1,10 +1,12 @@
+#main menu
+
 import cargar_liga as liga
 from settings import (espana,alemania,italia,austria,inglaterra)
 
 def main():
     """ Menu Operaciones"""
     while True:
-        print('''       Bienvenido al sistema gestor de ligas\n
+        print('''        Bienvenido al sistema gestor de ligas\n
         De que liga quiere cargar los datos:\n
         1.- Liga Española
         2.- Liga Alemana
@@ -17,15 +19,15 @@ def main():
 
         match opcion:
             case('1'):
-                liga.cargar_liga(espana)
+                liga.cargar_liga(espana,"España")
             case('2'):
-                liga.cargar_liga(alemania)
+                liga.cargar_liga(alemania,"Alemania")
             case('3'):
-                liga.cargar_liga(austria)
+                liga.cargar_liga(austria,"Austria")
             case('4'):
-                liga.cargar_liga(inglaterra)
+                liga.cargar_liga(inglaterra,"Inglaterra")
             case('5'):
-                liga.cargar_liga(italia)
+                liga.cargar_liga(italia,"Italia")
             case('0'):
                 quit()
             case(_):

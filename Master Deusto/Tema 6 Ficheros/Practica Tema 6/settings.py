@@ -1,4 +1,4 @@
-#Fichero con las rutas para el acceso a datos de cada pais
+#Fichero con las rutas para el acceso a datos de cada liga
 
 espana = "https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/es.1.clubs.json"
 alemania = "https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/de.1.clubs.json"
