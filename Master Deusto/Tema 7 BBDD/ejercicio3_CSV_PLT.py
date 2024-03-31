@@ -9,7 +9,7 @@ csv = pandas.read_csv("http://users.stat.ufl.edu/~winner/data/world_wine.csv"
 #print(csv)
 #Leemos la columna PerCap
 columna_y = csv['PerCap']
-numero_registros = 4
+numero_registros = 50
 
 #Establecemos en Matplotlib que es un histograma con los valores y
 plt.hist(columna_y,numero_registros)
