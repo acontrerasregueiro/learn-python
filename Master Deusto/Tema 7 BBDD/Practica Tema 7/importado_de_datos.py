@@ -68,7 +68,7 @@ def cargar_idioma_continente():
                 | 'Colombia Trinidad y Tobago' | 'Cuba' | 'Venezuela'):
                 cancion.append('America del sur')
                 cancion.append('Español')    
-            case('Estados Unidos' | 'Canada'):
+            case('Estados Unidos' | 'Canadá'):
                 cancion.append('America del norte')
                 cancion.append('Inglés')
             case('España'):
@@ -93,10 +93,10 @@ def cargar_idioma_continente():
                 cancion.append('America del sur')
                 cancion.append('Inglés')
         
-        print(cancion)   
+        #print(cancion)   
 
-cargar_datos()
-cargar_idioma_continente()
+#cargar_datos()
+#cargar_idioma_continente()
 
 
 
