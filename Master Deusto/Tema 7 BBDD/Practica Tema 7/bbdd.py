@@ -1,28 +1,31 @@
 import sqlite3
 import importado_de_datos
 
-importado_de_datos.cargar_datos()
-importado_de_datos.cargar_idioma_continente()
-conn = sqlite3.connect('canciones.db')
-print("'CONEXION ESTABLECIDA CORRECTAMENTE")
+def carga_datos_automatico():
+    importado_de_datos.cargar_datos()
+    importado_de_datos.cargar_idioma_continente()
+    conn = sqlite3.connect('canciones.db')
+    print("'CONEXION ESTABLECIDA CORRECTAMENTE")
 
-cursor = conn.cursor()
+    cursor = conn.cursor()
 
-#Creamos la BBDD
+    #Creamos la BBDD
 
-cursor.execute("""CREATE TABLE IF NOT EXISTS canciones(titulo TEXT, 
-               autor TEXT,ano DATE,semanas INT,pais TEXT,continente TEXT,
-               idioma TEXT)""")
-
-
-
-cursor.executemany('INSERT INTO canciones values(?,?,?,?,?,?,?)',importado_de_datos.canciones)
-
-cursor.execute('SELECT * FROM canciones WHERE semanas > 18')
+    cursor.execute("""CREATE TABLE IF NOT EXISTS mejorescanciones(titulo TEXT, 
+                autor TEXT,ano INT,semanas INT,pais TEXT,continente TEXT,
+                idioma TEXT)""")
 
 
-total = cursor.fetchall()
-for cancion in total:
-    print(cancion)
-cursor.close()
-#cursor.execute("""INSERT INTO canciones""")
+    cursor.executemany('INSERT INTO mejorescanciones values(?,?,?,?,?,?,?)',importado_de_datos.canciones)
+
+
+
+    total = cursor.fetchall()
+    for elemento in total:
+        print(elemento)
+    conn.commit()
+    cursor.execute('SELECT * FROM mejorescanciones')
+    cursor.close()
+    #cursor.execute("""INSERT INTO canciones""")
+
+carga_datos_automatico()

@@ -67,5 +67,5 @@ for registro in peliculas:
         print('PELÍCULA EN EL TOP 10 DE OSCAR SOBRE NOMINACIONES',registro[0])
         
 #Cerramos la conexión
-
+conn.commit()
 conn.close()
