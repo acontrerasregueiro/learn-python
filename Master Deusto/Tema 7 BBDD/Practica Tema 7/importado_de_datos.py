@@ -1,5 +1,5 @@
 #En este fichero a través de webscrapping descargamos y formateamos los datos
-
+#Para posterior introducción en BBDD
 
 from selenium import webdriver
 from bs4 import BeautifulSoup
