@@ -5,9 +5,9 @@ import importado_de_datos
 def carga_datos_automatico():
     importado_de_datos.cargar_datos()   #Cargamos los datos por webscrapping
     importado_de_datos.cargar_idioma_continente()  #Añadimos idioma y continente
-    
+    importado_de_datos.eliminar_doble_pais()
     conn = sqlite3.connect('canciones.db')
-    print("'CONEXION ESTABLECIDA CORRECTAMENTE")
+    print("CONEXION ESTABLECIDA CORRECTAMENTE")
 
     cursor = conn.cursor()
 
@@ -19,12 +19,12 @@ def carga_datos_automatico():
     #Introducimos los datos previamente extraidos
     cursor.executemany('INSERT INTO mejorescanciones values(?,?,?,?,?,?,?)',importado_de_datos.canciones)
 
-    total = cursor.fetchall()
-    for elemento in total:
-        print(elemento)
     
     #Confirmamos datos, mostramos y cerramos conexión    
     conn.commit()
     cursor.execute('SELECT * FROM mejorescanciones')
+    total = cursor.fetchall()
+    for elemento in total:
+        print(elemento)
     cursor.close()
 

@@ -47,6 +47,7 @@ def cargar_datos():
         #Formateamos las que tienen varios años, solo nos interesa el primer año
         cancion[2] = cancion[2][:4] 
         cadena = ''
+        #Eliminamos elementos duplicados en pais descargados por webscrapping
         for palabra in cancion[4]:
             if len(cancion[4]) > 1:
                 if palabra not in cadena:
@@ -93,10 +94,17 @@ def cargar_idioma_continente():
                 cancion.append('America del sur')
                 cancion.append('Inglés')
         
-        #print(cancion)   
 
-#cargar_datos()
-#cargar_idioma_continente()
+def eliminar_doble_pais():
+    #Dado el enunciado solámente necesitamos el primer pais en la bbdd
+    #Por lo que actualizamos la BBDD de los dos registros que vienene
+    #Con doble país
+    for cancion in canciones:
+        if cancion[4] == 'Colombia Trinidad y Tobago':
+            cancion[4] = 'Colombia'
+        if cancion[4] == 'Argentina España':
+            cancion[4] = 'Argentina'
+        
 
 
 
