@@ -1,5 +1,6 @@
 import sqlite3
 import time
+import crear_grafico
 
 def consultar_listado():
     #Muestra todo el listado
@@ -106,7 +107,8 @@ def cancion_mayor_tiempo():
     print(f'{total[0]} con un {porcentaje}% en el año')
 
     time.sleep(4)
-    conn.close()  
+    conn.close()
+    crear_grafico.generar_grafico_porcentaje()  
 
 def eliminar_tabla():
     #Función para eliminar la bbdd donde almacenamos los datos
