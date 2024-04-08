@@ -1,4 +1,4 @@
-import sqlite3
+cdimport sqlite3
 import time
 import crear_grafico
 

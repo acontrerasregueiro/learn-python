@@ -10,10 +10,8 @@ def generar_grafico_porcentaje():
     semanas = ((Data[1]['Semanas']*100)/52)
 
     ax.bar(canciones,semanas)
-
     ax.set_ylabel("Porcentaje")
     ax.set_title("Porcentaje semanas número 1")
-
 
     plt.show()
 #generar_grafico_porcentaje()
